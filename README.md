@@ -11,6 +11,8 @@ Backend (Java Spring Boot):
    •	Spring AI (LLM client)
    •	Embedding + VectorStore
    •	PDF reader 
+LLM:
+   • Ollama3 (Locale)
 ________________________________________
 Fonctionnalités:
    •	 Upload de fichiers PDF (CV)
