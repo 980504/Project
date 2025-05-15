@@ -1,0 +1,21 @@
+services:
+  pgvector:
+    container_name: pg-store
+    image: pgvector/pgvector:pg17
+    environment:
+      POSTGRES_DB: cv-store
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234
+    ports:
+      - '5432:5432'
+    volumes:
+      - pgvector_data:/var/lib/postgresql/data
+    networks:
+      - app-network
+
+volumes:
+  pgvector_data:
+
+networks:
+  app-network:
+    driver: bridge
