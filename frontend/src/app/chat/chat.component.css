@@ -1,0 +1,10 @@
+.container {
+  max-width: 600px;
+  margin: auto;
+}
+
+input, button {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}

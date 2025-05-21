@@ -1,0 +1,24 @@
+<div class="container mt-4">
+  <h2 class="text-center mb-4">Agent IA</h2>
+
+  <div class="mb-3">
+    <label class="form-label btn-secondary" >Choisir un fichier PDF :</label>
+    <input type="file" class="form-control" style="border: 1px solid black;" (change)="onFileSelected($event)" />
+    <div class="d-flex justify-content-center">
+      <button class="btn btn-outline-primary btn-sm mt-2" style="width: 120px;" (click)="onUpload()">Uploader PDF</button>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Posez votre question :</label>
+    <input [(ngModel)]="inputText" class="form-control" style="border: 1px solid black;" placeholder="Posser une question :" />
+    <div class="d-flex justify-content-center">
+      <button class="btn btn-outline-primary btn-sm mt-1" style="width: 120px;" (click)="onSubmitQuestion()">Envoyer</button>
+    </div>
+  </div>
+
+  <div *ngIf="message" class="alert alert-info mt-3">{{ message }}</div>
+  <div *ngIf="submittedText" class="alert alert-secondary mt-3" style="border: 1px solid black;">
+    <strong> Réponse :</strong> {{ submittedText }}
+  </div>
+</div>
